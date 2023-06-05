@@ -107,7 +107,7 @@
 * Gelin backpressure görsel olarak bakalım.
 
 <p align ="center">
-<img src = "r6">
+<img src = "https://github.com/rasitesdmr/SpringBoot-Reactive-Webflux/blob/master/SpringBoot-Reactive/images/r6.png">
 </p>
 
 * Sistem, Üretici (Publisher), Tüketici (Consumer) ve Grafiksel Kullanıcı Arayüzü (GUI) olmak üzere üç servis içerir.
@@ -124,7 +124,7 @@
   görmezler.
 
 <p align ="center">
-<img src = "r7">
+<img src = "https://github.com/rasitesdmr/SpringBoot-Reactive-Webflux/blob/master/SpringBoot-Reactive/images/r7.png">
 </p>
 
 * Gönderilen veri akışını kontrol etmek ilk seçenektir. Temelde, yayıncının olayların hızını yavaşlatması gerekmektedir.
@@ -139,7 +139,7 @@
   çökmeyecektir.
 
 <p align ="center">
-<img src = "r8">
+<img src = "https://github.com/rasitesdmr/SpringBoot-Reactive-Webflux/blob/master/SpringBoot-Reactive/images/r8.png">
 </p>
 
 * Yeni olayları sadece abone onları talep ettiğinde gönderin. Bu, yayıcı isteğinde elemanları toplamak için bir çekme
@@ -156,7 +156,7 @@
 ## 📌 Blocking Request
 
 <p align ="center">
-<img src = "r1">
+<img src = "https://github.com/rasitesdmr/SpringBoot-Reactive-Webflux/blob/master/SpringBoot-Reactive/images/r1.png">
 </p>
 
  ```xml
@@ -234,13 +234,13 @@ server.tomcat.threads.max=2
 ```
 
 <p align ="center">
-<img src = "r2">
+<img src = "https://github.com/rasitesdmr/SpringBoot-Reactive-Webflux/blob/master/SpringBoot-Reactive/images/r2.png">
 </p>
 
 * İsteğimin yolunu belirtiyorum
 
 <p align ="center">
-<img src = "r3">
+<img src = "https://github.com/rasitesdmr/SpringBoot-Reactive-Webflux/blob/master/SpringBoot-Reactive/images/r3.png">
 </p>
 
 * Aynı anda kaç tane istek atacağımı belirtiyorum
@@ -269,13 +269,13 @@ Thread 38 Stop
   bitmesini beklidiğini görüyoruz. Thread isteği alıp db den kullanıcı çekene kadar engellendiğini görüyoruz.
 
 <p align ="center">
-<img src = "r4">
+<img src = "https://github.com/rasitesdmr/SpringBoot-Reactive-Webflux/blob/master/SpringBoot-Reactive/images/r4.png">
 </p>
 
 * İlk gelen istek 56 ms sürerken.
 
 <p align ="center">
-<img src = "5">
+<img src = "https://github.com/rasitesdmr/SpringBoot-Reactive-Webflux/blob/master/SpringBoot-Reactive/images/r5.png">
 </p>
 
 * Son gelen isteğe baktığımızda istek 1159 ms sürdüğünü görüyoruz.
