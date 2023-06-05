@@ -19,8 +19,6 @@
 * Günümüzde microservisler, cloud-native uygulamalar ve distrubuted sistemler oldukça yaygın, resourceları daha iyi
   kullanmak ve low latency (düşük bekleme süreleri) ile birlikte responsive (hızlı tepki verebilmeyi) olmayı istiyor.
 
-## 📌 Kavramlar
-
 | Kavramlar     | Anlamları                                                                                                                       |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------|
 | `Asenkron`    | Bir işlem yapılırken o işlemin sonucu beklenmeden başka bir işlem yapabilmeye yani eşzamansız işlemlere denir.                  |
@@ -167,7 +165,6 @@
 </dependency>
 ```
 
-
 * Geleneksel Model-View-Controller (MVC) mimarisinde, bir istemci bir istekte bulunduğunda, bu istek bir Servlet
   container tarafından işlenir.
 
@@ -280,4 +277,50 @@ Thread 38 Stop
 
 * Son gelen isteğe baktığımızda istek 1159 ms sürdüğünü görüyoruz.
 
-* Şimdi Reactive programla nedir ondan bahsedelim.
+# 🎯 Reactive Programlama Nasıl Çalışır?
+
+<p align ="center">
+<img src = "https://github.com/rasitesdmr/SpringBoot-Reactive-Webflux/blob/master/SpringBoot-Reactive/images/r9.png">
+</p>
+
+* Reactive programlamada tüm mesele streamler ile veriyi olay bazlı olarak yönetmekten geçer.
+
+* Eventlar (olaylar), mesajlar, çağrılar ve hatta hatalar bir data stream üzerinden iletilir.
+
+* Reactive programlama ile bu akışlar sürekli olarak gözlenir/izlenir/observe ve bir değer değişiminde direkt olarak
+  tepki verir ve sıradaki işlemi gerçekleştirir.
+
+* Bir uygulama programlarken herhangi bir şeyden/her şeyden veri akışları oluşturmalısınız: Kullanıcı işlemleri, HTTP
+  istekleri, alınan mesajlar, verilecek mesajlar, bildirimler, bir değişkendeki değişiklikler, cacheleme olayları,
+  database işlemleri; değişebilecek ve oluşabilecek her şey için diyebiliriz.
+
+* Data sourcetan (Veri kaynağı) alınan her sonuç için bir tane event yada mesaj oluşturulur. Data Source: External
+  Service (Herhangi bir başka servis), Database (Veritabanı) yada File (Dosya) olabilir. Eğer data source sonucunda
+  tamamlanmış ya da hata alınmışsa bir tane event ya da mesaj oluşmuştur. Yani her iki durumda da bir eventımız mevcut.
+
+## 📌 Hata Olursa ?
+
+<p align ="center">
+<img src = "https://github.com/rasitesdmr/SpringBoot-Reactive-Webflux/blob/master/SpringBoot-Reactive/images/r10.png">
+</p>
+
+* Akış ile ilgili oluşan her şey bir event ya da mesaja karşılık geliyor. Dolayısıyla oluşan hata da event olarak
+  oluşuyor.
+
+* Itemlar alınırken hata ile karşılaştık ve bu hata bir event olarak onError’a düştü. Exception’ı nasıl handle
+  edeceğimizi de onError kısmında çözümleyebiliyoruz.
+
+* Database’e sorgu attık ve hiçbir sonuç yok. Bu durumda yine de onComplete eventı oluşur.
+
+* Kayıt için ise kayıt isteğini attık, çağrımız hızlıca cevap döndü ve başarılı tamamlandıysa onComplete event’ı ile
+  bunu anlayabiliriz.
+
+* onNext ile stream ederken bir sonraki item’a geçebiliriz.
+
+* onComplete başarıyla tamamlandığını belirtirken
+
+* onError hata durumu oldugunu gösterir.
+
+
+
+
