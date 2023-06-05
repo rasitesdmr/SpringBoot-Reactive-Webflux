@@ -321,6 +321,17 @@ Thread 38 Stop
 
 * onError hata durumu oldugunu gösterir.
 
+## 📌 Okuduğum Makaleler
 
+* https://medium.com/yemeksepeti-teknoloji/spring-webflux-ile-reactive-programlamaya-giris-f2b73449a0d0#:~:text=Nedir%20Spring%20Webflux%3F,Reactor%20%C3%BCzerine%20kurulu%20bir%20frameworkt%C3%BCr.
+* https://medium.com/yemeksepeti-teknoloji/reactive-programlama-nedir-server-side-reactive-programlama-f485d9179df9
+* https://reflectoring.io/getting-started-with-spring-webflux/
+* https://www.reactive-streams.org/
+* https://hackernoon.com/an-intro-to-spring-webflux-threading-model
+* https://www.baeldung.com/spring-webflux-concurrency
+* https://reflectoring.io/spring-webclient/
+* https://www.westagilelabs.com/blog/five-interesting-facts-about-reactive-programming-frameworks/
+* https://www.zibtek.com/blog/java-reactive-programming-everything-you-need-to-know/
+* https://www.baeldung.com/spring-webflux-backpressure
 
 
